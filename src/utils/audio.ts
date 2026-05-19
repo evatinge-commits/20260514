@@ -2,8 +2,8 @@ export const playSound = (text: string) => {
   if ('speechSynthesis' in window) {
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'zh-CN';
-    utterance.rate = 0.8; // Slower for kids
-    utterance.pitch = 1.5; // High pitch for "child-like" feel
+    utterance.rate = 0.9; // Slightly faster than before
+    utterance.pitch = 1.8; // Higher pitch for a cuter "child-like" feel
     window.speechSynthesis.speak(utterance);
   }
 };
